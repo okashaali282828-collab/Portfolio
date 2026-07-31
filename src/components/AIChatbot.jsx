@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Bot, X, Send, User, Loader2 } from "lucide-react";
 
+
 export default function AIChatbot({ data }) {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
@@ -58,7 +59,7 @@ Keep responses brief, polite, and helpful.
       // Localhost vs Production (Vercel) Handler
       if (apiKey) {
         response = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+          `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
