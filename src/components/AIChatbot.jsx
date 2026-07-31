@@ -95,7 +95,7 @@ Keep responses brief, polite, and helpful.
         {
           role: "model",
           text: error.message.includes("Quota") 
-            ? "API rate limit reached. Please wait 1-2 minutes and try again."
+            ? "Please try again later."
             : "Oops! Something went wrong. Please try again in a moment.",
         },
       ]);
